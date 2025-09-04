@@ -124,14 +124,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DynamicArray.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="neetcode-solutions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DynamicArray.h" />
+    <ClInclude Include="LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DynamicArray.cs" />
     <None Include="DynamicArray.js" />
+    <None Include="DynamicArray.py" />
+    <None Include="LinkedList.cs" />
+    <None Include="LinkedList.py" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

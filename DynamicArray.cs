@@ -14,36 +14,43 @@ public class DynamicArray
 
     public int Get(int i)
     {
-        re
+        return this.array[i];
     }
 
     public void Set(int i, int n)
     {
-
+        this.array[i] = n;
     }
 
-    public void PushBack(int n)
+    public void PushBack(int n) // Adds an element to the end
     {
-
+        if (this.size == this.capacity)
+        {
+            this.Resize();
+        }
+        this.array[this.size++] = n;
     }
 
-    public int PopBack()
+    public int PopBack() // Removes and returns the last element
     {
-
+        return this.array[--this.size];
     }
 
-    private void Resize()
+    private void Resize() // Doubles the capacity
     {
-
+        this.capacity *= 2;
+        int[] newArray = new int[this.capacity];
+        Array.Copy(this.array, newArray, this.size);
+        this.array = newArray;
     }
 
     public int GetSize()
     {
-
+        return this.size;
     }
 
     public int GetCapacity()
     {
-
+        return this.capacity;
     }
 }
