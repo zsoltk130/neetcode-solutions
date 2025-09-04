@@ -8,7 +8,7 @@ private:
 public:
     DynamicArray(int capacity) {
         this->capacity = capacity;
-        arr = new int[capacity];
+        arr = new int[capacity]; // Allocate on the heap
 		size = 0;
     }
 
@@ -20,18 +20,18 @@ public:
 		arr[i] = n;
     }
 
-    void pushback(int n) {
+	void pushback(int n) { // Add to the end of the array
         if (size == capacity) {
             resize();
         }
 		arr[size++] = n;
     }
 
-    int popback() {
+	int popback() { // Remove from the end of the array
 		return arr[--size];
     }
 
-    void resize() {
+	void resize() { // Double the capacity of the array
         capacity *= 2;
         int* newArr = new int[capacity];
         for (int i = 0; i < size; i++) {
